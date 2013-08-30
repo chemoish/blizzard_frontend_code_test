@@ -1,0 +1,88 @@
+/**
+ * Global
+ */
+
+/* some sans serif font was used, but couldn't tell */
+body
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+ul
+{
+    margin: 0;
+    padding: 0;
+}
+
+/**
+ * Nav
+ */
+
+nav ul
+{
+    list-style: none;
+    width: 200px;
+}
+
+/**
+ * Menu
+ */
+
+/* my monitors are pretty bad so not sure if I was suppose to margin-bottom: -1px; to keep the shared borders as 1px—word doc makes it look 50/50 */
+.menu li
+{
+    position: relative;
+}
+
+/* color-picked + measured padding from photoshop */
+.menu a
+{
+    background-color: #111010;
+    border: 1px solid #1e1d1d;
+    color: #b65312;
+    display: block;
+    padding: 7px;
+}
+
+/* img shows default cursor and not a pointer */
+.menu li:hover > a,
+.menu a:hover
+{
+    color: #cfcece;
+    cursor: default;
+}
+
+/**
+ * Submenu
+ */ 
+
+/* measured from photoshop */
+.submenu
+{
+    display: none;
+    left: 200px;
+    position: absolute;
+    top: 0;
+}
+
+/* decided on using a unicode character that could be modified in CSS rather than using an img - sibling combinator requires submenu to come before anchor  */
+.submenu ~ a:before
+{
+    content: '\203a';
+    float: right;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 14px;
+}
+
+/* show submenu on hover */
+.menu li:hover > .submenu
+{
+    display: block;
+}
