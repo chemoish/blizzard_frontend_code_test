@@ -33,11 +33,11 @@ var Menu = Object.create({
 
         // build link
         a.href = item.href;
-        a.id = item.id;
+        a.id = ['menu_item', item.id].join('_');
         a.innerHTML = item.name;
 
-        if (item.children && item.children instanceof Array) {
-            // build submenu - using sibling combinator so submenu must come before link
+        if (item.children instanceof Array) {
+            // build submenu - using sibling combinator so submenu must come before link in DOM
             sub_menu = this.buildMenu(item.children);
 
             sub_menu.className = 'submenu';
@@ -56,13 +56,14 @@ var Menu = Object.create({
         var xhr = new XMLHttpRequest();
 
         // allow the onReadyStateChange to call the menu class with the response it received from the ajax request
-        // menu building logic can stay within the class without having the xhr context to worry about
+        // menu building logic can stay within the Menu class without having the xhr context to worry about
         function onReadyStateChange(fn, that) {
             return function () {
+                // hijack complete
                 if (this.readyState == 4) {
-                    var response = this.responseText;
+                    var data = this.responseText;
 
-                    fn.apply(that, [response, this]);
+                    fn.apply(that, [data, this]);
                 }
             };
         };
