@@ -1,0 +1,71 @@
+[{
+    "id": "game",
+    "name": "Game",
+    "href": "/game",
+    "children": []
+}, {
+    "id": "community",
+    "name": "Community",
+    "href": "/community",
+    "children": null
+}, {
+    "id": "media",
+    "name": "Media",
+    "href": "/media",
+    "children": []
+}, {
+    "id": "forums",
+    "name": "Forums",
+    "href": "/forums",
+    "children": [{
+        "id": "gameplay",
+        "name": "Gameplay",
+        "href": "/forums/gameplay",
+        "children": []
+    }, {
+        "id": "classes",
+        "name": "Classes",
+        "href": "/forums/classes",
+        "children": [{
+            "id": "barbarian",
+            "name": "Barbarian",
+            "href": "/forums/classes/barbarian",
+            "children": null
+        }, {
+            "id": "demon_hunter",
+            "name": "Demon Hunter",
+            "href": "/forums/classes/demon-hunter",
+            "children": null
+        }, {
+            "id": "monk",
+            "name": "Monk",
+            "href": "/forums/classes/monk",
+            "children": null
+        }, {
+            "id": "witch_doctor",
+            "name": "Witch Doctor",
+            "href": "/forums/classes/witch-doctor",
+            "children": null
+        }, {
+            "id": "wizard",
+            "name": "Wizard",
+            "href": "/forums/classes/wizard",
+            "children": null
+        }]
+    }, {
+        "id": "beta",
+        "name": "Beta",
+        "href": "/forums/beta",
+        "children": []
+    }, {
+        "id": "support",
+        "name": "Support",
+        "href": "/forums/support",
+        "children": []
+    }]
+}, {
+    "id": "services",
+    "name": "Services",
+    "href": "/services",
+    "children": []
+}]
